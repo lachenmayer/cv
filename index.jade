@@ -13,27 +13,33 @@ mixin table(title, contents)
         for item in row
           td= item
 
-mixin cvItem(fromDate, toDate, title, descriptionItems)
-  .grid-30.date
+mixin job(fromDate, toDate, title, descriptionItems)
+  .grid-30
     if toDate
-      p= fromDate + '&mdash;' + toDate
+      p.date= fromDate + '&ndash;' + toDate
     else
-      p= fromDate
-  .grid-70.cvItem
-    p= title
+      p.date= fromDate
+  .grid-70.job
+    p.title= title
     if descriptionItems
       ul
         each descriptionItem in descriptionItems
           li= descriptionItem
+
+mixin skill(description)
+  .grid-70.push-30.skill
+    p.description= description
 
 !!!5
 html
   head
     title Harry Lachenmayer&mdash;CV
     link(rel='stylesheet', href='css/style.css')
+    meta(name='viewport', content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1')
   body
     .grid-container
-      h1 Harry Lachenmayer
+      .grid-100
+        h1 Harry Lachenmayer
       .grid-50
         mixin table('Contact Details', contactDetails)
       .grid-50
@@ -41,38 +47,38 @@ html
 
       mixin header('Education')
 
-      mixin cvItem('2011', 'present', 'Imperial College London&mdash;MEng in Computing (currently in second year)')
-      mixin cvItem('2001', '2011', 'St. Kilians Deutsche Schule Dublin', ['Achieved 580 of 600 possible points in the Irish Leaving Certificate', 'Was awarded a scholarship for full 6 years of secondary schooling'])
+      mixin job('2011', 'present', 'Imperial College London&mdash;MEng in Computing (currently in second year)')
+      mixin job('2001', '2011', 'St. Kilians Deutsche Schule Dublin', ['Achieved 580 of 600 possible points in the Irish Leaving Certificate', 'Was awarded a scholarship for full 6 years of secondary schooling'])
 
       mixin header('Work Experience')
 
-      mixin cvItem('July', 'September 2012', 'Software Development Engineer Intern, Amazon.com, Inc&mdash;Seattle, WA, USA', ["Implemented and shipped an iPhoto Import feature for Amazon's Cloud Drive Mac desktop app, working in Objective-C on the client-side and Java on the server-side", "Proof-read and improved the French and German translations for Cloud Drive's web and desktop UIs", "Prototyped and started development of an iPhone app"])
-      mixin cvItem('January', 'March 2012', 'Web Developer, TEDxImperialCollege&mdash;London, United Kingdom', ['Designed and implemented conference website front-end using HTML, CSS and Javascript, interfacing with WordPress-based backend', 'Designed custom roller banners for use on the day of the conference', 'Implemented a live Twitter and Flickr feed for display on-stage during intermissions'])
-      mixin cvItem('September 2011', null, 'English Tutor, Schulkolleg Institut Dr. Rampitsch&mdash;Stuttgart, Germany', ['Taught one-on-one English lessons to a student at Abitur level (A-Level equivalent)'])
-      mixin cvItem('July 2010', null, 'Java Developer, KSB, S.A.S.&mdash;Gradignan, France', ['Responsible for rewriting from scratch a set of valve recommendation tools in Java, which were originally written in Visual Basic (~10K LOC in Java)', 'Proof-read English and German translations of data sheets and valve assembly instructions, correcting spelling and grammatical errors'])
+      mixin job('July', 'September 2012', 'Software Development Engineer Intern, Amazon.com, Inc&mdash;Seattle, WA, USA', ["Implemented and shipped an iPhoto Import feature for Amazon's Cloud Drive Mac desktop app, working in Objective-C on the client-side and Java on the server-side", "Proof-read and improved the French and German translations for Cloud Drive's web and desktop UIs", "Prototyped and started development of an iPhone app"])
+      mixin job('January', 'March 2012', 'Web Developer, TEDxImperialCollege&mdash;London, United Kingdom', ['Designed and implemented conference website front-end using HTML, CSS and Javascript, interfacing with WordPress-based backend', 'Designed custom roller banners for use on the day of the conference', 'Implemented a live Twitter and Flickr feed for display on-stage during intermissions'])
+      mixin job('September 2011', null, 'English Tutor, Schulkolleg Institut Dr. Rampitsch&mdash;Stuttgart, Germany', ['Taught one-on-one English lessons to a student at Abitur level (A-Level equivalent)'])
+      mixin job('July 2010', null, 'Java Developer, KSB, S.A.S.&mdash;Gradignan, France', ['Responsible for rewriting from scratch a set of valve recommendation tools in Java, which were originally written in Visual Basic (~10K LOC in Java)', 'Proof-read English and German translations of data sheets and valve assembly instructions, correcting spelling and grammatical errors'])
 
       mixin header('Achievements')
 
-      mixin cvItem('December 2012', null, 'FounderBus', ['Participated in a startup competition set on a bus from Oxford to Paris via Cambridge, London and Antwerp', 'Designed and developed a landing page, and a mock profile page for a fashion crowd-funding platform', 'My team advanced to the international finals, pitching to VCs at Microsoft Paris'])
-      mixin cvItem('2009', null, 'Dublin City University', ['Successfully completed a full semester of first year Engineering at the age of 16 while in Transition Year (first year of high school in Ireland)', 'Scored near the top of the class in "Software Development for Engineers" module, which was taught in C'])
-      mixin cvItem('September 2009', null, 'Model European Parliament&mdash;The Hague, Netherlands', ['Was part of a 5-person delegation representing Ireland to debate on current issues with young people from all over Europe, speaking in the Dutch national parliament'])
-      mixin cvItem('2007', '2009', 'CTYI (Center for Talented Youth Ireland)', ['Participated in 3-week summer courses "for young people aged between 12 and 16 years, who have been identified as having high academic ability (95th percentile in mathematical and/or verbal reasoning)"', 'Completed courses in Computer Applications (2007), Chinese Language &amp; Culture (2008) and 21st Century Skills (2009)'])
+      mixin job('December 2012', null, 'FounderBus', ['Participated in a startup competition set on a bus from Oxford to Paris via Cambridge, London and Antwerp', 'Designed and developed a landing page, and a mock profile page for a fashion crowd-funding platform', 'My team advanced to the international finals, pitching to VCs at Microsoft Paris'])
+      mixin job('2009', null, 'Dublin City University', ['Successfully completed a full semester of first year Engineering at the age of 16 while in Transition Year (first year of high school in Ireland)', 'Scored near the top of the class in "Software Development for Engineers" module, which was taught in C'])
+      mixin job('September 2009', null, 'Model European Parliament&mdash;The Hague, Netherlands', ['Was part of a 5-person delegation representing Ireland to debate on current issues with young people from all over Europe, speaking in the Dutch national parliament'])
+      mixin job('2007', '2009', 'CTYI (Center for Talented Youth Ireland)', ['Participated in 3-week summer courses "for young people aged between 12 and 16 years, who have been identified as having high academic ability (95th percentile in mathematical and/or verbal reasoning)"', 'Completed courses in Computer Applications (2007), Chinese Language &amp; Culture (2008) and 21st Century Skills (2009)'])
 
       mixin header('Technical Skills')
 
-      mixin cvItem(null, null, 'Programming languages (ordered by lines of code written):', ['JavaScript(/CoffeeScript), Python, Java, Objective-C, C'])
-      mixin cvItem(null, null, 'Always eager to pick up new languages and environments, having taught myself programming using online tutorials since the age of 13')
-      mixin cvItem(null, null, 'Web back-end development using Node.js/Express and Ruby/Sinatra')
-      mixin cvItem(null, null, 'Web front-end development using Jade, SASS/Stylus, and CoffeeScript')
-      mixin cvItem(null, null, 'iOS and Mac development')
-      mixin cvItem(null, null, 'Adobe Photoshop and Photoshop Lightroom for photography, web and print design')
+      mixin skill('Programming languages (ordered by lines of code written): JavaScript(/CoffeeScript), Python, Java, Objective-C, C')
+      mixin skill('Always eager to pick up new languages and environments, having taught myself programming using online tutorials since the age of 13')
+      mixin skill('Web back-end development using Node.js/Express and Ruby/Sinatra')
+      mixin skill('Web front-end development using Jade, SASS/Stylus, and CoffeeScript')
+      mixin skill('iOS and Mac development')
+      mixin skill('Adobe Photoshop and Photoshop Lightroom for photography, web and print design')
 
       mixin header('Language Skills')
 
-      mixin cvItem(null, null, 'Native speaker of English and German, having grown up in a bi-lingual English/German environment')
-      mixin cvItem(null, null, 'Completely fluent in French, having close ties to France and having spent a school term abroad in Lyon, France to learn the language at the age of 16')
+      mixin skill('Native speaker of English and German, having grown up in a bi-lingual English/German environment')
+      mixin skill('Completely fluent in French, having close ties to France and having spent a school term abroad in Lyon, France to learn the language at the age of 16')
 
       mixin header('Other Interests')
 
-      mixin cvItem(null, null, 'Passionate about music, playing violin and viola since the age of six, and producing electronic music in my spare time')
-      mixin cvItem(null, null, 'Strong interest in photography, both digital and analog')
+      mixin skill('Passionate about music, playing violin and viola since the age of six, and producing electronic music in my spare time')
+      mixin skill('Strong interest in photography, both digital and analog')

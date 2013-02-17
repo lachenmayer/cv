@@ -1,18 +1,34 @@
 @import "unsemantic-grid-responsive.css"
 
-@font-face
-  font-family: 'MuseoSans-500'
-  src: url('/fonts/25E162_0_0.eot')
-  src: url('/fonts/25E162_0_0.eot?#iefix') format('embedded-opentype'), url('/fonts/25E162_0_0.woff') format('woff'), url('/fonts/25E162_0_0.ttf') format('truetype')
+// Typography //
 
 body
-  font-family: Verdana, sans-serif
+  font-family: Helvetica, Arial, sans-serif
+  font-size: 14px
+  line-height: 1.5
+  color: #222
 
-h1, h2, h3, h4, h5, h6
-  font-family: 'MuseoSans-500'
+h1, h2
+  font-weight: normal
 
-.cvItem
+.title
+  font-size: 1.2em
+
+// Layout //
+
+table
+  width: 100%
+
+.title, .description
+  margin-top: 0
+
+.date
+  margin-top: 0
+  margin-bottom: 0
+
+.job
   ul
     padding: 0
   li
     list-style: none
+    padding-bottom: 1em
