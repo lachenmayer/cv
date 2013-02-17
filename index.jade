@@ -1,17 +1,26 @@
 contactDetails = [['E-Mail', 'harrylachenmayer@gmail.com'], ['Website', 'http://lachenmayer.me/'], ['Phone Number', '+44 7955525785']]
 personalInformation = [['Date of Birth', '27/01/1993'], ['Place of Birth', 'Stuttgart, Germany'], ['Citizenship', 'German']]
 
+//- Stolen and adapted from http://www.leancrew.com/all-this/2010/11/smart-quotes-in-javascript/
+- function smarten(a) {
+-   a = a.replace(/(^|[-\u2014\s(\["])'/g, "$1&lsquo;");       // opening singles
+-   a = a.replace(/'/g, "&rsquo;");                            // closing singles & apostrophes
+-   a = a.replace(/(^|[-\u2014/\[(\u2018\s])"/g, "$1&ldquo;"); // opening doubles
+-   a = a.replace(/"/g, "&rdquo;");                            // closing doubles
+-   return a
+- };
+
 mixin header(title)
-  .grid-100
-    h2= title
+  .header.grid-100
+    h2= smarten(title)
 
 mixin table(title, contents)
-  h2= title
+  h2= smarten(title)
   table
     for row in contents
       tr
         for item in row
-          td= item
+          td= smarten(item)
 
 mixin job(fromDate, toDate, title, descriptionItems)
   .grid-30
@@ -19,16 +28,16 @@ mixin job(fromDate, toDate, title, descriptionItems)
       p.date= fromDate + '&ndash;' + toDate
     else
       p.date= fromDate
-  .grid-70.job
-    p.title= title
+  .job.grid-70
+    p.title= smarten(title)
     if descriptionItems
       ul
         each descriptionItem in descriptionItems
-          li= descriptionItem
+          li= smarten(descriptionItem)
 
 mixin skill(description)
-  .grid-70.push-30.skill
-    p.description= description
+  .skill.grid-70.push-30
+    p.description= smarten(description)
 
 !!!5
 html
@@ -38,11 +47,11 @@ html
     meta(name='viewport', content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1')
   body
     .grid-container
-      .grid-100
+      .name.grid-100
         h1 Harry Lachenmayer
-      .grid-50
+      .contact-details.grid-50
         mixin table('Contact Details', contactDetails)
-      .grid-50
+      .personal-information.grid-50
         mixin table('Personal Information', personalInformation)
 
       mixin header('Education')
