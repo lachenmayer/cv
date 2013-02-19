@@ -1,7 +1,7 @@
 contactDetails = [['E-Mail', 'harrylachenmayer@gmail.com'], ['Website', 'http://lachenmayer.me/'], ['Phone Number', '+44 7955525785']]
 personalInformation = [['Date of Birth', '27/01/1993'], ['Place of Birth', 'Stuttgart, Germany'], ['Citizenship', 'German']]
 
-//- Stolen and adapted from http://www.leancrew.com/all-this/2010/11/smart-quotes-in-javascript/
+//- Stolen from http://www.leancrew.com/all-this/2010/11/smart-quotes-in-javascript/
 - function smarten(a) {
 -   a = a.replace(/(^|[-\u2014\s(\["])'/g, "$1&lsquo;");       // opening singles
 -   a = a.replace(/'/g, "&rsquo;");                            // closing singles & apostrophes
@@ -91,3 +91,13 @@ html
 
       mixin skill('Passionate about music, playing violin and viola since the age of six, and producing electronic music in my spare time')
       mixin skill('Strong interest in photography, both digital and analog')
+
+    script(type="text/javascript")
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-38604896-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
