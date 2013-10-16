@@ -12,32 +12,32 @@ personalInformation = [['Date of Birth', '27/01/1993'], ['Place of Birth', 'Stut
 
 mixin header(title)
   .header.grid-100
-    h2= smarten(title)
+    h2!= smarten(title)
 
 mixin table(title, contents)
-  h2= smarten(title)
+  h2!= smarten(title)
   table
     for row in contents
       tr
         for item in row
-          td= smarten(item)
+          td!= smarten(item)
 
 mixin job(fromDate, toDate, title, descriptionItems)
   .grid-30
     if toDate
-      p.date= fromDate + '&ndash;' + toDate
+      p.date!= fromDate + '&ndash;' + toDate
     else
-      p.date= fromDate
+      p.date!= fromDate
   .job.grid-70
-    p.title= smarten(title)
+    p.title!= smarten(title)
     if descriptionItems
       ul
         each descriptionItem in descriptionItems
-          li= smarten(descriptionItem)
+          li!= smarten(descriptionItem)
 
 mixin skill(description)
   .skill.grid-70.push-30
-    p.description= smarten(description)
+    p.description!= smarten(description)
 
 !!!5
 html
@@ -61,6 +61,7 @@ html
 
       mixin header('Work Experience')
 
+      mixin job('July', 'September 2013', 'Software Engineer Intern, Google, Inc.&mdash;Z&uuml;rich, Switzerland', ['Added chapter marker functionality to the YouTube annotations editor', 'Built a working prototype of a new version of the annotations editor', 'Created a reusable timeline component for use in YouTube editing interfaces', 'Technologies used: JavaScript, Python, ActionScript'])
       mixin job('April 2013', null, 'Web Developer, TEDxAlbertopolis', ["Implemented the web site for the first TEDx conference in London's Royal Albert Hall, based on Photoshop mockups by a professional designer", 'Technologies used: Node.js, CoffeeScript, Stylus, express.js, Tumblr API'])
       mixin job('July', 'September 2012', 'Software Development Engineer Intern, Amazon.com, Inc&mdash;Seattle, WA, USA', ["Implemented and shipped an iPhoto Import feature for Amazon's Cloud Drive Mac desktop app, working in Objective-C on the client-side and Java on the server-side", "Proof-read and improved the French and German translations for Cloud Drive's web and desktop UIs", "Prototyped and started development of an iPhone app"])
       mixin job('January', 'March 2012', 'Web Developer, TEDxImperialCollege&mdash;London, United Kingdom', ['Designed and implemented conference website front-end using HTML, CSS and Javascript, interfacing with WordPress-based backend', 'Designed custom roller banners for use on the day of the conference', 'Implemented a live Twitter and Flickr feed for display on-stage during intermissions'])
@@ -76,9 +77,9 @@ html
 
       mixin header('Technical Skills')
 
-      mixin skill('Programming languages (ordered by lines of code written): JavaScript(/CoffeeScript), Python, Java, Objective-C, C')
+      mixin skill('Programming languages (ordered by lines of code written): JavaScript(/CoffeeScript), Python, Java, Clojure, Objective-C, C')
       mixin skill('Always eager to pick up new languages and environments, having taught myself programming using online tutorials since the age of 13')
-      mixin skill('Web back-end development using Node.js/Express and Ruby/Sinatra')
+      mixin skill('Web back-end development using Node.js/Express')
       mixin skill('Web front-end development using Jade, SASS/Stylus, and CoffeeScript')
       mixin skill('iOS and Mac development')
       mixin skill('Adobe Photoshop and Photoshop Lightroom for photography, web and print design')
@@ -90,10 +91,10 @@ html
 
       mixin header('Other Interests')
 
-      mixin skill('Passionate about music, playing violin and viola since the age of six, and producing electronic music in my spare time')
+      mixin skill('Passionate about music, playing violin and viola since the age of six, and producing electronic music in my spare time. (See my <a href="http://soundcloud.com/lachenmayer">SoundCloud</a>)')
       mixin skill('Strong interest in photography, both digital and analog')
 
-    script(type="text/javascript")
+    script(type="text/javascript").
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-38604896-1']);
       _gaq.push(['_trackPageview']);

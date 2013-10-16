@@ -1,19 +1,33 @@
 #!/usr/bin/env bash
 
-mkdir -p deploy/css/
-jade index.jade --out deploy/
-sass css/style.sass deploy/css/style.css
-cp css/unsemantic-grid-responsive.css deploy/css/
+function build() {
+  mkdir -p deploy/css/
+  jade index.jade --out deploy/
+  sass css/style.sass deploy/css/style.css
+  cp css/unsemantic-grid-responsive.css deploy/css/
+}
 
-git checkout gh-pages
+function deploy() {
+  if [ ! -d "deploy/" ]; then return; fi
 
-mv deploy/css/* ./css
-mv deploy/index.html .
+  git checkout gh-pages
 
-rm -rf deploy/
+  mv deploy/css/* ./css
+  mv deploy/index.html .
 
-git add css/ index.html
-git commit -m "Update page to commit `git rev-parse --short master`"
+  rm -rf deploy/
 
-git checkout master
+  git add css/ index.html
+  git commit -m "Update page to commit `git rev-parse --short master`"
 
+  git checkout master
+}
+
+if [ $1 == "build" ]; then
+  build
+elif [ $1 == "deploy" ]; then
+  deploy
+else
+  build
+  deploy
+fi
