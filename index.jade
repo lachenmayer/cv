@@ -1,5 +1,5 @@
-contactDetails = [['E-Mail', 'harrylachenmayer@gmail.com'], ['Website', 'http://lachenmayer.me/'], ['Phone Number', '+44 7955525785']]
-personalInformation = [['Date of Birth', '27/01/1993'], ['Place of Birth', 'Stuttgart, Germany'], ['Citizenship', 'German']]
+- contactDetails = [['E-Mail', 'harrylachenmayer@gmail.com'], ['Website', 'http://lachenmayer.me/'], ['Twitter', '@lachenmayer']]
+- personalInformation = [['Date of Birth', '1993-01-27'], ['Place of Birth', 'Stuttgart, Germany'], ['Citizenship', 'German']]
 
 //- Stolen from http://www.leancrew.com/all-this/2010/11/smart-quotes-in-javascript/
 - function smarten(a) {
@@ -39,7 +39,7 @@ mixin skill(description)
   .skill.grid-70.push-30
     p.description!= smarten(description)
 
-!!!5
+doctype html
 html
   head
     title Harry Lachenmayer&mdash;CV
@@ -56,12 +56,13 @@ html
 
       mixin header('Education')
 
-      mixin job('2011', '2015 (estd.)', 'Imperial College London&mdash;MEng in Computing (currently in third year)')
+      mixin job('2011', '2015', 'Imperial College London&mdash;MEng in Computing (currently in final year, graduating end of June 2015)')
       mixin job('2001', '2011', 'St. Kilians Deutsche Schule Dublin', ['Achieved 580 of 600 possible points in the Irish Leaving Certificate', 'Was awarded a scholarship for full 6 years of secondary schooling'])
 
       mixin header('Work Experience')
 
-      mixin job('July', 'September 2013', 'Software Engineer Intern, Google, Inc.&mdash;Z&uuml;rich, Switzerland', ['Added chapter marker functionality to the YouTube annotations editor', 'Built a working prototype of a new version of the annotations editor', 'Created a reusable timeline component for use in YouTube editing interfaces', 'Technologies used: JavaScript, Python, ActionScript'])
+      mixin job('April 2014', 'September 2014', 'Software Engineer Intern, Knowledge Exploration (Events) Team, Google, Inc.&mdash;New York City, USA', ['Developed and launched a new version of the Event knowledge card shown on the main Google search page (>100k impressions/day), featuring improved i18n, more consistent styling and additional functionality', 'Performed extensive refactoring of several related components in C++ and Java serving code', 'Technologies used: Java, C++'])
+      mixin job('July', 'September 2013', 'Software Engineer Intern, YouTube Annotations Editor Team, Google, Inc.&mdash;Z&uuml;rich, Switzerland', ['Added chapter marker functionality to the YouTube annotations editor', 'Built a working prototype of a new version of the annotations editor', 'Created a reusable timeline component for use in YouTube editing interfaces', 'Technologies used: JavaScript, Python, ActionScript'])
       mixin job('April 2013', null, 'Web Developer, TEDxAlbertopolis', ["Implemented the web site for the first TEDx conference in London's Royal Albert Hall, based on Photoshop mockups by a professional designer", 'Technologies used: Node.js, CoffeeScript, Stylus, express.js, Tumblr API'])
       mixin job('July', 'September 2012', 'Software Development Engineer Intern, Amazon.com, Inc&mdash;Seattle, WA, USA', ["Implemented and shipped an iPhoto Import feature for Amazon's Cloud Drive Mac desktop app, working in Objective-C on the client-side and Java on the server-side", "Proof-read and improved the French and German translations for Cloud Drive's web and desktop UIs", "Prototyped and started development of an iPhone app"])
       mixin job('January', 'March 2012', 'Web Developer, TEDxImperialCollege&mdash;London, United Kingdom', ['Designed and implemented conference website front-end using HTML, CSS and Javascript, interfacing with WordPress-based backend', 'Designed custom roller banners for use on the day of the conference', 'Implemented a live Twitter and Flickr feed for display on-stage during intermissions'])
@@ -75,14 +76,14 @@ html
       mixin job('September 2009', null, 'Model European Parliament&mdash;The Hague, Netherlands', ['Was part of a 5-person delegation representing Ireland to debate on current issues with young people from all over Europe, speaking in the Dutch national parliament'])
       mixin job('2007', '2009', 'CTYI (Center for Talented Youth Ireland)', ['Participated in 3-week summer courses "for young people aged between 12 and 16 years, who have been identified as having high academic ability (95th percentile in mathematical and/or verbal reasoning)"', 'Completed courses in Computer Applications (2007), Chinese Language &amp; Culture (2008) and 21st Century Skills (2009)'])
 
-      mixin header('Technical Skills')
+      mixin header('Technical Skills/Interests')
 
-      mixin skill('Programming languages (ordered by lines of code written): JavaScript(/CoffeeScript), Python, Java, Clojure, Objective-C, C')
+      mixin skill('Programming languages (ordered by lines of code written): JavaScript(/CoffeeScript), Java, Haskell, C++, Clojure, Python, Objective-C, C')
       mixin skill('Always eager to pick up new languages and environments, having taught myself programming using online tutorials since the age of 13')
-      mixin skill('Web back-end development using Node.js/Express')
-      mixin skill('Web front-end development using Jade, SASS/Stylus, and CoffeeScript')
+      mixin skill('Web front-end & back-end development')
       mixin skill('iOS and Mac development')
-      mixin skill('Adobe Photoshop and Photoshop Lightroom for photography, web and print design')
+      mixin skill('Functional programming (Haskell, Elm, Clojure) & programming language theory')
+      mixin skill('Peer-to-peer distributed systems (IPFS, Bitcoin/blockchain)')
 
       mixin header('Language Skills')
 
@@ -91,8 +92,7 @@ html
 
       mixin header('Other Interests')
 
-      mixin skill('Passionate about music, playing violin and viola since the age of six, and producing electronic music in my spare time. (See my <a href="http://soundcloud.com/lachenmayer">SoundCloud</a>)')
-      mixin skill('Strong interest in photography, both digital and analog')
+      mixin skill('Passionate about music, producing electronic music in my spare time (mainly using Ableton Live). (See my <a href="http://soundcloud.com/lachenmayer">SoundCloud</a>)')
 
     script(type="text/javascript").
       var _gaq = _gaq || [];

@@ -3,7 +3,7 @@
 function build() {
   mkdir -p deploy/css/
   jade index.jade --out deploy/
-  sass css/style.sass deploy/css/style.css
+  stylus css/style.styl --out deploy/css/
   cp css/unsemantic-grid-responsive.css deploy/css/
 }
 
