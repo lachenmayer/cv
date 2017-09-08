@@ -1,0 +1,29 @@
+{
+  "name": "graphql-cv",
+  "version": "1.0.0",
+  "description": "harry lachenmayer's graphql cv.",
+  "main": "index.js",
+  "dependencies": {
+    "apollo-server-express": "^1.1.2",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "graphql": "^0.11.3",
+    "graphql-tools": "^1.2.2",
+    "js-yaml": "^3.9.1",
+    "lodash.mapvalues": "^4.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lachenmayer/cv.git"
+  },
+  "author": "harry lachenmayer <harrylachenmayer@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lachenmayer/cv/issues"
+  },
+  "homepage": "https://github.com/lachenmayer/cv#readme"
+}

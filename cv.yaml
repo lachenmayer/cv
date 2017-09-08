@@ -1,0 +1,179 @@
+Personal Information:
+  Name: Harry Lachenmayer
+  Email: harrylachenmayer@gmail.com
+  Website: http://lachenmayer.me/
+  Twitter: https://twitter.com/lachenmayer
+  GitHub: https://github.com/lachenmayer
+  Keybase: https://keybase.io/lachenmayer
+  Citizenship: German
+
+Education:
+  - Establishment: Imperial College London
+    Degree: Master of Engineering
+    Subject: Computing
+    Start: 2011
+    End: 2015
+    Highlights:
+      - Graduated with First Class Honours
+  - Establishment: St. Kilians Deutsche Schule Dublin
+    Start: 2001
+    End: 2011
+    Highlights:
+      - Achieved 580 of 600 possible points in the Irish Leaving Certificate
+      - Was awarded a scholarship for full 6 years of secondary schooling
+
+Professional Projects:
+  - Company: HackCampus
+    Location: London, UK
+    Role: Co-founder
+    Start: March 2014
+    Highlights:
+      - At HackCampus, we help the brightest students find software engineering internships at London's best startups
+      - Responsible for matching students with internship roles among companies such as Deliveroo, SwiftKey, Secret Escapes and EDITED - 20 students have taken part in the internship programme so far, chosen from almost 1000 applications
+      - Founded the company while at university & secured ongoing support from Index Ventures
+      - Organise yearly 'demo days' where interns present the projects they have been working on during the summer
+      - Built website & application management tools, which are open sourced at https://github.com/hackcampus
+      - Read more at https://medium.com/@HackCampus/london-startups-tap-uks-top-universities-for-engineering-talent-6025fa3b7e47
+    Technologies:
+      - Node.js
+      - Express
+      - JavaScript (inu)
+      - PostgreSQL
+  - Company: Boiler Room
+    Location: London, UK
+    Role: Head of Development
+    Start: July 2015
+    End: June 2017
+    Highlights:
+      - Joined as first full-time developer, and grew the development team to 6 developers
+      - Led the redevelopment of Boiler Room's website and mobile apps (iOS & Android with React Native)
+      - Developed technical solutions for clients including Ray-Ban, Ballantines, Adidas
+      - Responsible for all technical hiring, hiring of a Head of Product, and hiring web development freelancers
+    Technologies:
+      - React
+      - React Native
+      - Redux
+      - RxJS
+      - GraphQL/Apollo
+      - PHP (WordPress, Craft CMS, Laravel)
+  - Company: Google
+    Location: New York City, USA
+    Role: Software Engineer Intern, Knowledge Exploration (Events) Team
+    Start: April 2014
+    End: September 2014
+    Highlights:
+      - Developed and launched a new version of the Event knowledge card shown on the main Google search page (>100k impressions/day), featuring improved i18n, more consistent styling and additional functionality
+      - Performed extensive refactoring of several related components in C++ and Java serving code
+    Technologies:
+      - Java
+      - C++
+  - Company: Google
+    Location: Zürich, Switzerland
+    Role: Software Engineer Intern, YouTube Annotations Editor Team
+    Start: July 2013
+    End: September 2013
+    Highlights:
+      - Added chapter marker functionality to the YouTube annotations editor
+      - Built a working prototype of a new annotations editor frontend (which was later launched in production in 2015)
+      - Created a reusable timeline component for use in YouTube editing interfaces
+    Technologies:
+      - JavaScript
+      - Python
+      - ActionScript
+  - Company: Amazon.com
+    Location: Seattle, WA, USA
+    Role: Software Development Engineer Intern
+    Start: July 2012
+    End: September 2012
+    Highlights:
+      - Implemented and shipped an iPhoto Import feature for Amazon’s Cloud Drive Mac desktop app
+      - Proof-read and improved the French and German translations for Cloud Drive’s web and desktop UIs
+      - Prototyped and started development of a Cloud Drive Photos iPhone app (not launched)
+    Technologies:
+      - Objective-C
+      - Java
+  - Company: KSB
+    Location: Bordeaux, France
+    Role: Software Engineering Intern
+    Start: July 2010
+    End: July 2011
+    Highlights:
+      - Responsible for rewriting from scratch an internal tool in Java, which was originally written in Visual Basic
+      - Shipped completed application within one month
+      - Proof-read English and German translations of data sheets and valve assembly instructions, correcting spelling and grammatical errors
+    Technologies:
+      - Java
+
+Freelance Projects (selected):
+  - Client: TEDxAlbertopolis
+    Project: Web development
+    Start: April 2013
+    End: April 2013
+    Highlights:
+      - Implemented the web site for the first TEDx conference in London’s Royal Albert Hall, in collaboration with a designer
+    Technologies:
+      - Node.js
+      - Express
+      - CoffeeScript
+      - Stylus
+  - Client: TEDxImperialCollege
+    Project: Web design & development
+    Start: January 2012
+    End: March 2012
+    Highlights:
+      - Designed and implemented conference website front-end, interfacing with WordPress-based backend
+      - Designed custom roller banners for use on the day of the conference
+      - Implemented a live Twitter and Flickr feed for display on-stage during intermissions
+    Technologies:
+      - HTML/CSS/JavaScript (JQuery)
+
+Personal Projects (selected):
+  - Name: tinyredux
+    Start: August 2017
+    End: August 2017
+    Description: |
+      Redux implemented with React setState().
+      Built when I was building a super-quick React prototype, and didn't want to import Redux & deal with its boilerplate.
+      Interestingly, this exact feature is now (as of September 2017) built in to ReasonReact, Facebook's official React bindings to its Reason OCaml dialect. https://reasonml.github.io/reason-react/blog.html#reducers-are-here
+    Link: https://www.npmjs.com/package/tinyredux
+    Technologies:
+      - React
+  - Name: FilePigeon
+    Start: March 2017
+    End: in progress
+    Description: |
+      Send files directly from your laptop to people nearby.
+      You can drag files into the app, and FilePigeon will start a local HTTP server, and give you a link that you can share with friends on the same network.
+      They will then be able to download the files directly from your computer, using your fast local connection.
+    Link: https://github.com/lachenmayer/filepigeon
+    Technologies:
+      - Electron
+      - Node.js
+      - Cycle.js
+
+Teaching/Mentoring:
+  - Teaching introductory programming in Python & Linux basics to a 13 year old (2017)
+  - Teaching assistant at Code First Girls (2014)
+  - Tutoring English at Schulkolleg Institut Dr. Rampitsch in Stuttgart, Germany to a student at Abitur level (2011)
+  - Teaching viola playing to a a 13 year old beginner (2010-2011)
+  - Tutoring Mathematics to a student at my grade level (2010-2011)
+  - Tutoring Physics to a student at my grade level (2010-2011)
+
+Achievements/Awards:
+  - Associateship of the City and Guilds of London Institute (ACGI) (since August 2015)
+  - Kairos Society Global Fellowship (2014)
+  - FounderBus (2012) - participated in a startup competition set on a bus from Oxford to Paris via Cambridge, London and Antwerp. My team advanced to the international finals, pitching to VCs at Microsoft Paris.
+  - IBM Second Year Group Project Prize, Imperial College London (2012)
+  - Completed a full semester of first year Engineering at Dublin City University at the age of 16 (2009), as part of the Early University Entrance programme. Scored near the top of the class in "Software Development for Engineers" module, which was taught in C.
+  - Model European Parliament, The Hague, Netherlands - was part of a 5-person delegation representing Ireland to debate on current issues with young people from all over Europe, speaking in the Dutch national parliament (age 16)
+  - CTYI (Center for Talented Youth Ireland) - completed summer courses in Computer Applications (2007), Chinese Language & Culture (2008) and 21st Century Skills (2009)
+
+Languages:
+  - German (native)
+  - English (native)
+  - French (fluent)
+
+Interests:
+  - Distributed web technologies, eg. Dat, IPFS
+  - Functional programming, eg. Haskell, Elm
+  - Electronic music production (mainly using Ableton Live)
